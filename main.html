@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>タスク管理アプリメイン画面</title>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="menu">
+        <h1>タスク管理アプリ</h1>
+        <div class="user">
+            <p>ようこそ○○さん</p>
+            <button class="logout" onclick="location.href='./login.html'">ログアウト</button>
+        </div>
+    </div>
+    <div onclick="open_form();" id="task-input" class="task-input">
+        メモを入力...
+    </div>
+    <div id="input-box" class="input-box" contenteditable="true">
+        <div class="input-title">タイトル</div>
+        <div class="input-content">メモを入力...</div>
+        <div class="input-button">
+            <button>色を変更</button>
+            <button>画像を追加</button>
+            <button id="close">閉じる</button>
+        </div>
+    </div>
+    <div class="tasks">
+        <div onclick="edit_task();" class="task" contenteditable="false">
+            <div class="task-title">
+                買い物
+            </div>
+            <div class="task-content">
+                ヨーグルト
+            </div>
+        </div>
+        <div onclick="edit_task();" class="task" contenteditable="true">
+            <div class="task-title">
+                帰りにやること
+            </div>
+            <div class="task-content">
+                ガソリンを入れる
+            </div>
+        </div>
+        <div id="task-edit" class="task-edit" contenteditable="true">
+            <div class="task-title">
+                帰りにやること
+            </div>
+            <div class="task-content">
+                ガソリンを入れる
+            </div>
+            <div class="task-button">
+                <button>色を変更</button>
+                <button>画像を追加</button>
+                <button id="close-task">閉じる</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/main.js" ></script>
+</body>
+</html>
